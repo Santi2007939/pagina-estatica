@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="Tracodi-Logo.ico">
+        <title>Tracodi</title>
+    </head>
+    <body>
+        <header>
+            <img src="Tracodi-Banner.png" alt="Imagen del banner de la página" id="banner">
+            <nav>
+                <ul id="Lista">
+                    <li class="ver"><a href="#traductores">Convertidores</a></li>
+                    <li class="ver"><a href="#binario">Binario</a></li>
+                    <li class="ver"><a href="#cifrado-cesar">Cifrado César - Rot 13</a></li>
+                    <li class="ver"><a href="#reversa">Reversa</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="explicacion">
+            <p id="intro">Página en la que podrás traducir un texto a Código Binario, Cifrado César - Rot 13 o colocar tu texto al revés.</p>
+        </section>
+        <section id="convertidores">
+            <div id="opciones">
+                <button class="opcion" id="btn-Bi">Binario</button>
+                <button class="opcion" id="btn-Ce">Cifrado César - Rot 13</button>
+                <button class="opcion" id="btn-Re">Reversa</button>
+            </div>
+            <div id="contenedor-conbi">
+                <div id="cc-conver">
+                    <div class="traductor" id="cc-texto">
+                        <h2 class="traductor-texto">Texto</h2>
+                        <textarea name="input" id="cc-input" cols="30" rows="10" class="areat binario"></textarea>
+                    </div>
+                    <i class="fa-solid fa-arrow-right-arrow-left" id="cc-intercambiar"></i>
+                    <i class="fa-solid fa-arrows-rotate" id="cc-convertir-texto-a-codigo"></i>
+                    <div class="traductor" id="cc-codigo">
+                        <h2 class="traductor-texto">Código binario</h2>
+                        <button id="sep-jun" class="separado">Mostrando separado</button>
+                        <textarea name="output" id="cc-output" cols="30" rows="10" class="areat binario"></textarea>
+                    </div>
+                </div>
+                <div id="cc-alfabeto">
+                    <h3 class="alfabeto">Alfabeto Binario</h3>
+                    <hr>
+                    <div class="caracter">
+                        <h4 class="sub-alfabeto">Letras mayúsculas</h4>
+                        <div id="cc-LM" class="contenedor-letras">
+                            <div class="cont"><span class="letra">A</span><span class="codigo">01000001</span></div>
+                            <div class="cont"><span class="letra">Á</span><span class="codigo">11000001</span></div>
+                            <div class="cont"><span class="letra">B</span><span class="codigo">01000010</span></div>
+                            <div class="cont"><span class="letra">C</span><span class="codigo">01000011</span></div>
+                            <div class="cont"><span class="letra">D</span><span class="codigo">01000100</span></div>
+                            <div class="cont"><span class="letra">E</span><span class="codigo">01000101</span></div>
+                            <div class="cont"><span class="letra">É</span><span class="codigo">11000101</span></div>
+                            <div class="cont"><span class="letra">F</span><span class="codigo">01000110</span></div>
+                            <div class="cont"><span class="letra">G</span><span class="codigo">01000111</span></div>
+                            <div class="cont"><span class="letra">H</span><span class="codigo">01001000</span></div>
+                            <div class="cont"><span class="letra">I</span><span class="codigo">01001001</span></div>
+                            <div class="cont"><span class="letra">Í</span><span class="codigo">11001101</span></div>
+                            <div class="cont"><span class="letra">J</span><span class="codigo">01001010</span></div>
+                            <div class="cont"><span class="letra">K</span><span class="codigo">01001011</span></div>
+                            <div class="cont"><span class="letra">L</span><span class="codigo">01001100</span></div>
+                            <div class="cont"><span class="letra">M</span><span class="codigo">01001101</span></div>
+                            <div class="cont"><span class="letra">N</span><span class="codigo">01001110</span></div>
+                            <div class="cont"><span class="letra">Ñ</span><span class="codigo">11010001</span></div>
+                            <div class="cont"><span class="letra">O</span><span class="codigo">01001111</span></div>
+                            <div class="cont"><span class="letra">Ó</span><span class="codigo">11010011</span></div>
+                            <div class="cont"><span class="letra">P</span><span class="codigo">01010000</span></div>
+                            <div class="cont"><span class="letra">Q</span><span class="codigo">01010001</span></div>
+                            <div class="cont"><span class="letra">R</span><span class="codigo">01010010</span></div>
+                            <div class="cont"><span class="letra">S</span><span class="codigo">01010011</span></div>
+                            <div class="cont"><span class="letra">T</span><span class="codigo">01010100</span></div>
+                            <div class="cont"><span class="letra">U</span><span class="codigo">01010101</span></div>
+                            <div class="cont"><span class="letra">Ú</span><span class="codigo">11011010</span></div>
+                            <div class="cont"><span class="letra">Ü</span><span class="codigo">11011100</span></div>
+                            <div class="cont"><span class="letra">V</span><span class="codigo">01010110</span></div>
+                            <div class="cont"><span class="letra">W</span><span class="codigo">01010111</span></div>
+                            <div class="cont"><span class="letra">X</span><span class="codigo">01011000</span></div>
+                            <div class="cont"><span class="letra">Y</span><span class="codigo">01011001</span></div>
+                            <div class="cont"><span class="letra">Z</span><span class="codigo">01011010</span></div>
+                        </div>
+                    </div>
+                    <div class="caracter">
+                        <h4 class="sub-alfabeto">Letras minúsculas</h4>
+                        <div id="cc-Lmin" class="contenedor-letras">
+                            <div class="cont"><span class="letra">a</span><span class="codigo">01000001</span></div>
+                            <div class="cont"><span class="letra">á</span><span class="codigo">11100001</span></div>
+                            <div class="cont"><span class="letra">b</span><span class="codigo">01100010</span></div>
+                            <div class="cont"><span class="letra">c</span><span class="codigo">01100011</span></div>
+                            <div class="cont"><span class="letra">d</span><span class="codigo">01100100</span></div>
+                            <div class="cont"><span class="letra">e</span><span class="codigo">01100101</span></div>
+                            <div class="cont"><span class="letra">é</span><span class="codigo">11101001</span></div>
+                            <div class="cont"><span class="letra">f</span><span class="codigo">01100110</span></div>
+                            <div class="cont"><span class="letra">g</span><span class="codigo">01100111</span></div>
+                            <div class="cont"><span class="letra">h</span><span class="codigo">01101000</span></div>
+                            <div class="cont"><span class="letra">i</span><span class="codigo">01101001</span></div>
+                            <div class="cont"><span class="letra">í</span><span class="codigo">11101101</span></div>
+                            <div class="cont"><span class="letra">j</span><span class="codigo">01101010</span></div>
+                            <div class="cont"><span class="letra">k</span><span class="codigo">01101011</span></div>
+                            <div class="cont"><span class="letra">l</span><span class="codigo">01101100</span></div>
+                            <div class="cont"><span class="letra">m</span><span class="codigo">01101101</span></div>
+                            <div class="cont"><span class="letra">n</span><span class="codigo">01101110</span></div>
+                            <div class="cont"><span class="letra">ñ</span><span class="codigo">11110001</span></div>
+                            <div class="cont"><span class="letra">o</span><span class="codigo">01101111</span></div>
+                            <div class="cont"><span class="letra">ó</span><span class="codigo">11110011</span></div>
+                            <div class="cont"><span class="letra">p</span><span class="codigo">01110000</span></div>
+                            <div class="cont"><span class="letra">q</span><span class="codigo">01110001</span></div>
+                            <div class="cont"><span class="letra">r</span><span class="codigo">01110010</span></div>
+                            <div class="cont"><span class="letra">s</span><span class="codigo">01110011</span></div>
+                            <div class="cont"><span class="letra">t</span><span class="codigo">01110100</span></div>
+                            <div class="cont"><span class="letra">u</span><span class="codigo">01110101</span></div>
+                            <div class="cont"><span class="letra">ú</span><span class="codigo">11111010</span></div>
+                            <div class="cont"><span class="letra">ü</span><span class="codigo">11111100</span></div>
+                            <div class="cont"><span class="letra">v</span><span class="codigo">01110110</span></div>
+                            <div class="cont"><span class="letra">w</span><span class="codigo">01110111</span></div>
+                            <div class="cont"><span class="letra">x</span><span class="codigo">01111000</span></div>
+                            <div class="cont"><span class="letra">y</span><span class="codigo">01111001</span></div>
+                            <div class="cont"><span class="letra">z</span><span class="codigo">01111010</span></div>
+                        </div>
+                    </div>
+                    <div class="caracter">
+                        <h4 class="sub-alfabeto">Números</h4>
+                        <div id="cc-Num" class="contenedor-letras">
+                            <div class="cont"><span class="letra">0</span><span class="codigo">00110000</span></div>
+                            <div class="cont"><span class="letra">1</span><span class="codigo">00110001</span></div>
+                            <div class="cont"><span class="letra">2</span><span class="codigo">00110010</span></div>
+                            <div class="cont"><span class="letra">3</span><span class="codigo">00110011</span></div>
+                            <div class="cont"><span class="letra">4</span><span class="codigo">00110100</span></div>
+                            <div class="cont"><span class="letra">5</span><span class="codigo">00110101</span></div>
+                            <div class="cont"><span class="letra">6</span><span class="codigo">00110110</span></div>
+                            <div class="cont"><span class="letra">7</span><span class="codigo">00110111</span></div>
+                            <div class="cont"><span class="letra">8</span><span class="codigo">00111000</span></div>
+                            <div class="cont"><span class="letra">9</span><span class="codigo">00111001</span></div>
+                        </div>
+                    </div>
+                    <div class="caracter">
+                        <h4 class="sub-alfabeto">Puntuación</h4>
+                        <div id="cc-Pun" class="contenedor-letras">
+                            <div class="cont"><span class="letra">(espacio)</span><span class="codigo">00100000</span></div>
+                            <div class="cont"><span class="letra">!</span><span class="codigo">00100001</span></div>
+                            <div class="cont"><span class="letra">"</span><span class="codigo">00100010</span></div>
+                            <div class="cont"><span class="letra">#</span><span class="codigo">00100011</span></div>
+                            <div class="cont"><span class="letra">$</span><span class="codigo">00100100</span></div>
+                            <div class="cont"><span class="letra">%</span><span class="codigo">00100101</span></div>
+                            <div class="cont"><span class="letra">&</span><span class="codigo">00100110</span></div>
+                            <div class="cont"><span class="letra">'</span><span class="codigo">00100111</span></div>
+                            <div class="cont"><span class="letra">(</span><span class="codigo">00101000</span></div>
+                            <div class="cont"><span class="letra">)</span><span class="codigo">00101001</span></div>
+                            <div class="cont"><span class="letra">*</span><span class="codigo">00101010</span></div>
+                            <div class="cont"><span class="letra">+</span><span class="codigo">00101011</span></div>
+                            <div class="cont"><span class="letra">,</span><span class="codigo">00101100</span></div>
+                            <div class="cont"><span class="letra">-</span><span class="codigo">00101101</span></div>
+                            <div class="cont"><span class="letra">.</span><span class="codigo">00101110</span></div>
+                            <div class="cont"><span class="letra">/</span><span class="codigo">00101111</span></div>
+                            <div class="cont"><span class="letra">:</span><span class="codigo">00111010</span></div>
+                            <div class="cont"><span class="letra">;</span><span class="codigo">00111011</span></div>
+                            <div class="cont"><span class="letra">&lt;</span><span class="codigo">00111100</span></div>
+                            <div class="cont"><span class="letra">=</span><span class="codigo">00111101</span></div>
+                            <div class="cont"><span class="letra">&gt;</span><span class="codigo">00111110</span></div>
+                            <div class="cont"><span class="letra">?</span><span class="codigo">00111111</span></div>
+                            <div class="cont"><span class="letra">@</span><span class="codigo">01000000</span></div>
+                            <div class="cont"><span class="letra">[</span><span class="codigo">01011011</span></div>
+                            <div class="cont"><span class="letra">\</span><span class="codigo">01011100</span></div>
+                            <div class="cont"><span class="letra">]</span><span class="codigo">01011101</span></div>
+                            <div class="cont"><span class="letra">^</span><span class="codigo">01011110</span></div>
+                            <div class="cont"><span class="letra">_</span><span class="codigo">01011111</span></div>
+                            <div class="cont"><span class="letra">`</span><span class="codigo">01100000</span></div>
+                            <div class="cont"><span class="letra">{</span><span class="codigo">01111011</span></div>
+                            <div class="cont"><span class="letra">|</span><span class="codigo">01111100</span></div>
+                            <div class="cont"><span class="letra">}</span><span class="codigo">01111101</span></div>
+                            <div class="cont"><span class="letra">~</span><span class="codigo">01111110</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contenedor-conce">
+                <div id="ce-conver">
+                    <div class="traductor" id="ce-texto">
+                        <h2 class="traductor-texto">Texto</h2>
+                        <textarea name="input" id="ce-input" cols="30" rows="10" class="areat cesar"></textarea>
+                    </div>
+                    <i class="fa-solid fa-arrows-rotate" id="ce-convertir-texto-a-codigo"></i>
+                    <div class="traductor" id="ce-codigo">
+                        <h2 class="traductor-texto">Cifrado César - ROT13</h2>
+                        <textarea name="output" id="ce-output" cols="30" rows="10" class="areat cesar"></textarea>
+                    </div>
+                </div>
+                <div id="ce-alfabeto">
+                    <h3 class="alfabeto">Cambio de Letras</h3>
+                    <hr>
+                    <div class="caracter">
+                        <h4 class="sub-alfabeto">Letras</h4>
+                        <div id="ce-LM" class="contenedor-letras">
+                            <div class="cont"><span class="letra">A</span><span class="codigo">n</span></div>
+                            <div class="cont"><span class="letra">b</span><span class="codigo">O</span></div>
+                            <div class="cont"><span class="letra">C</span><span class="codigo">p</span></div>
+                            <div class="cont"><span class="letra">d</span><span class="codigo">Q</span></div>
+                            <div class="cont"><span class="letra">E</span><span class="codigo">r</span></div>
+                            <div class="cont"><span class="letra">f</span><span class="codigo">S</span></div>
+                            <div class="cont"><span class="letra">G</span><span class="codigo">t</span></div>
+                            <div class="cont"><span class="letra">h</span><span class="codigo">U</span></div>
+                            <div class="cont"><span class="letra">I</span><span class="codigo">v</span></div>
+                            <div class="cont"><span class="letra">j</span><span class="codigo">W</span></div>
+                            <div class="cont"><span class="letra">K</span><span class="codigo">x</span></div>
+                            <div class="cont"><span class="letra">l</span><span class="codigo">Y</span></div>
+                            <div class="cont"><span class="letra">M</span><span class="codigo">z</span></div>
+                            <div class="cont"><span class="letra">n</span><span class="codigo">A</span></div>
+                            <div class="cont"><span class="letra">O</span><span class="codigo">b</span></div>
+                            <div class="cont"><span class="letra">p</span><span class="codigo">C</span></div>
+                            <div class="cont"><span class="letra">Q</span><span class="codigo">d</span></div>
+                            <div class="cont"><span class="letra">r</span><span class="codigo">E</span></div>
+                            <div class="cont"><span class="letra">S</span><span class="codigo">f</span></div>
+                            <div class="cont"><span class="letra">t</span><span class="codigo">G</span></div>
+                            <div class="cont"><span class="letra">U</span><span class="codigo">h</span></div>
+                            <div class="cont"><span class="letra">v</span><span class="codigo">I</span></div>
+                            <div class="cont"><span class="letra">W</span><span class="codigo">j</span></div>
+                            <div class="cont"><span class="letra">x</span><span class="codigo">K</span></div>
+                            <div class="cont"><span class="letra">Y</span><span class="codigo">l</span></div>
+                            <div class="cont"><span class="letra">z</span><span class="codigo">M</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="descripciones">
+            <section id="binario">
+                <div class="descrip-texto">
+                    <h2 class="des-Ti">Código Binario</h2>
+                    <p>Es un sistema numérico en base 2, es un sistema de codificación de texto o procesadores de instrucciones de computadora, este sistema numérico solo cuenta con las cifras 0 y 1. En informática y telecomunicaciones es utilizado para la codificación de datos, como cadenas de caracteres o bits.</p>
+                </div>
+                <img src="binario.png" alt="Codigo Binario">
+            </section>
+            <section id="cifrado-cesar">
+                <img src="cifrado-cesar.png" alt="Cifrado César" >
+                <div class="descrip-texto">
+                    <h2 class="des-Ti">Cifrado César - ROT 13</h2>
+                    <p>Es un cifrado César utilizado para ocultar un texto reemplazando letra por letra trece posiciones por delante. Se utiliza la misma clave para cifrar y descifrar, por ello no es necesario intercambiar las posiciones para obtener un resultado diferente.</p>
+                </div>
+            </section>
+            <section id="reversa">
+                <div class="descrip-texto">
+                    <h2 class="des-Ti">Reversa</h2>
+                    <p>Como dice el titulo, solo escribe el texto que tú desees y se colocara en reversa.</p>
+                </div>
+                <img src="reversa.png" alt="Reversa">
+            </section>
+        </div>
+        <footer>
+            <h2>Gracias por visitar, si deseas apoyarme puedes seguirme</h2>
+            <article class="dibujo">
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque blanco"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque blanco"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marroncl"></span><span class="bloque marroncl"></span><span class="bloque marroncl"></span><span class="bloque marroncl"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc "></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque marroncl"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marroncl"></span><span class="bloque marrono"></span><span class="bloque"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque marrono"></span><span class="bloque blanco"></span><span class="bloque marroncl"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque blanco"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marronc"></span><span class="bloque marrono"></span><span class="bloque blanco"></span><span class="bloque marrono"></span><span class="bloque marronc"></span><span class="bloque marroncl"></span><span class="bloque blanco"></span><span class="bloque marrono"></span><span class="bloque"></span></div>
+                <div class="piso"><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque marrono"></span><span class="bloque"></span></div>
+            </article>
+            <div id="redes">
+                <a href="https://twitter.com/Jonas62837530" target="_blank" rel="no-referrer"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/Santi2007939" target="_blank" rel="no-referrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://codepen.io/pen/" target="_blank" rel="no-referrer"><i class="fa-brands fa-codepen"></i>
+            </div>
+        </footer>
+        <script src="progra.js"></script>
+    </body>
+</html>

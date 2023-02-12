@@ -1,0 +1,51 @@
+:root {
+    --ancho: 5px;
+    --altura: 5px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dibujo {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.piso {
+    width: calc(var(--ancho) * 17);
+    height: var(--altura);
+}
+
+.bloque {
+    width: var(--ancho);
+    height: var(--altura);
+    display: inline-block;
+}
+
+.marrono {
+    background-color: #50270c;
+}
+
+.marronc {
+    background-color: #ce8e29;
+}
+
+.marroncl {
+    background-color: #eda222;
+}
+
+.blanco {
+    background-color: #f7c66a;
+}
