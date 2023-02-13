@@ -7,14 +7,14 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Karla&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="icon" href="Tracodi-Logo.ico">
         <title>Tracodi</title>
     </head>
     <body>
         <header>
-            <img src="Tracodi-Banner.png" alt="Imagen del banner de la página" id="banner">
+            <a href="https://twitter.com/Jonas62837530" target="_blank" rel="no-referrer"><img src="Tracodi-Banner.png" alt="Imagen del banner de la página" id="banner"></a>
             <nav>
                 <ul id="Lista">
                     <li class="ver"><a href="#convertidores">Convertidores</a></li>
@@ -30,7 +30,7 @@
         <section id="convertidores">
             <div id="opciones">
                 <button class="opcion" id="btn-Bi">Binario</button>
-                <button class="opcion" id="btn-Ce">Cifrado César - Rot 13</button>
+                <button class="opcion" id="btn-Ce">CC-ROT13</button>
                 <button class="opcion" id="btn-Re">Reversa</button>
             </div>
             <div id="contenedor-conbi">
@@ -146,7 +146,7 @@
                     <div class="caracter">
                         <h4 class="sub-alfabeto">Puntuación</h4>
                         <div id="cc-Pun" class="contenedor-letras">
-                            <div class="cont"><span class="letra">(espacio)</span><span class="codigo">00100000</span></div>
+                            <div class="cont"><span class="letra">esp</span><span class="codigo">00100000</span></div>
                             <div class="cont"><span class="letra">!</span><span class="codigo">00100001</span></div>
                             <div class="cont"><span class="letra">"</span><span class="codigo">00100010</span></div>
                             <div class="cont"><span class="letra">#</span><span class="codigo">00100011</span></div>
@@ -190,7 +190,7 @@
                         <textarea name="input" id="ce-input" cols="30" rows="10" class="areat cesar"></textarea>
                     </div>
                     <div class="InterYconve">
-                        <i class="fa-solid fa-arrows-rotate" id="ce-convertir-texto-a-codigo"></i>
+                        <i class="fa-solid fa-arrows-rotate" id="ce-convertir-texto-a-codigo"> Convertir</i>
                     </div>
                     <div class="traductor" id="ce-codigo">
                         <h2 class="traductor-texto">Cifrado César - ROT13</h2>
@@ -236,25 +236,31 @@
         </section>
         <section id="descripciones">
             <section id="binario">
-                <div class="descrip-texto">
-                    <h2 class="des-Ti">Código Binario</h2>
-                    <p>Es un sistema numérico en base 2, es un sistema de codificación de texto o procesadores de instrucciones de computadora, este sistema numérico solo cuenta con las cifras 0 y 1. En informática y telecomunicaciones es utilizado para la codificación de datos, como cadenas de caracteres o bits.</p>
+                <div class="contenedor">
+                    <div class="descrip-texto">
+                        <h2 class="des-Ti">Código Binario</h2>
+                        <p>Es un sistema numérico en base 2, es un sistema de codificación de texto o procesadores de instrucciones de computadora, este sistema numérico solo cuenta con las cifras 0 y 1. En informática y telecomunicaciones es utilizado para la codificación de datos, como cadenas de caracteres o bits.</p>
+                    </div>
+                    <a href="#convertidores" id="img-binario"><img src="binario.png" alt="Codigo Binario"></a>
                 </div>
-                <img src="binario.png" alt="Codigo Binario">
             </section>
             <section id="cifrado-cesar">
-                <img src="cifrado-cesar.png" alt="Cifrado César" >
-                <div class="descrip-texto">
-                    <h2 class="des-Ti">Cifrado César - ROT 13</h2>
-                    <p>Es un cifrado César utilizado para ocultar un texto reemplazando letra por letra trece posiciones por delante. Se utiliza la misma clave para cifrar y descifrar, por ello no es necesario intercambiar las posiciones para obtener un resultado diferente.</p>
+                <div class="contenedor">
+                    <a href="#convertidores" id="img-cesar"><img src="cifrado-cesar.png" alt="Cifrado César" ></a>
+                    <div class="descrip-texto">
+                        <h2 class="des-Ti">Cifrado César - ROT 13</h2>
+                        <p>Es un cifrado César utilizado para ocultar un texto reemplazando letra por letra trece posiciones por delante. Se utiliza la misma clave para cifrar y descifrar, por ello no es necesario intercambiar las posiciones para obtener un resultado diferente.</p>
+                    </div>
                 </div>
             </section>
             <section id="reversa">
-                <div class="descrip-texto">
-                    <h2 class="des-Ti">Reversa</h2>
-                    <p>Como dice el titulo, solo escribe el texto que tú desees y se colocara en reversa.</p>
+                <div class="contenedor">
+                    <div class="descrip-texto">
+                        <h2 class="des-Ti">Reversa</h2>
+                        <p>Como dice el titulo, solo escribe el texto que tú desees y se colocara en reversa.</p>
+                    </div>
+                    <a href="#convertidores" id="img-reversa"><img src="reversa.png" alt="Reversa"></a>
                 </div>
-                <img src="reversa.png" alt="Reversa">
             </section>
         </section>
         <footer>

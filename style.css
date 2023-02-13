@@ -1,6 +1,7 @@
 :root {
     --ancho: 5px;
     --altura: 5px;
+    --linpri: linear-gradient(to right, #6096B4, #93BFCF, #6096B4);
 }
 
 * {
@@ -23,7 +24,7 @@ header {
     width: 100%;
     z-index: 3;
     margin-top: -100px;
-    background: linear-gradient(to right, #6096B4, #93BFCF, #6096B4);
+    background: var(--linpri);
 }
 
 header img {
@@ -39,14 +40,24 @@ header ul {
 
 header ul li {
     list-style: none;
-    padding: 5px;
+    height: 98%;
     margin: 0 20px;
 }
 
 header ul li a {
+    display: flex;
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
     font-size: 25px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li a:hover {
+    background-color: whitesmoke;
+    color: #6096B4;
 }
 
 section {
@@ -57,6 +68,10 @@ section {
 
 section[id] {
     scroll-margin-top: 100px;
+}
+
+section[id="convertidores"] {
+    scroll-margin-top: 120px;
 }
 
 section:first-of-type {
@@ -114,9 +129,9 @@ section {
 textarea {
     width: 100%;
     border-radius: 10px;
-}
-
-textarea {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-family: 'Karla', sans-serif;
+    font-size: 22px;
     resize: vertical;
     min-height: 100px;
     padding: 10px;
@@ -127,7 +142,7 @@ textarea {
     padding: 10px;
 }
 
-#contenedor-conbi i {
+#contenedor-conbi i, #contenedor-conce i {
     padding: 20px;
     margin: 20px auto;
     border: #A7727D;
@@ -136,7 +151,7 @@ textarea {
     border-radius: 10px;
 }
 
-#contenedor-conbi i:hover {
+#contenedor-conbi i:hover, #contenedor-conce i:hover {
     background-color: #EDDBC7;
     border: #EDDBC7;
     color: #A7727D;
@@ -164,12 +179,126 @@ textarea {
     color: #86A3B8;
 }
 
+#cc-alfabeto, #ce-alfabeto {
+    max-width: 100%;
+    background-color: #D8D9CF;
+    margin: 50px 0 ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.alfabeto {
+    font-size: 30px;
+    padding: 10px 0;
+    color: #E26868;
+}
+
+.caracter {
+    width: 100%;
+    font-family: 'Karla', sans-serif;
+    background-color: #EDEDED;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+hr {
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+}
+
+.sub-alfabeto {
+    font-size: 20px;
+    color: #FF8787;
+}
+
+.contenedor-letras {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.cont {
+    border: 1px solid black;
+    display: grid;
+    width: 110px;
+    margin: 3px;
+    grid-template-columns: 1fr 2fr;
+    height: 40px;
+    font-size: 15px;
+}
+span {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.letra {
+    background-color: #EAEAEA;
+}
+
+.codigo {
+    border-left: 0.5px solid black;
+    background-color: #dedddd;
+}
+
+#descripciones{
+    border-top: 2px solid black;
+}
+
+#binario {
+    margin-top: 0;
+    background-color: #BDCDD6;
+}
+
+#cifrado-cesar {
+    background-color: #96c6d7;
+}
+
+#reversa {
+    background-color: #BDCDD6;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.des-Ti {
+    font-size: 60px;
+    color: #4f4848;
+    text-align: center;
+}
+
+.contenedor p {
+    font-size: 32px;
+    text-align: justify;
+} 
+
+footer {
+    text-align: center;
+}
+
+footer h2 {
+    padding-top: 2px;
+}
+
 .dibujo {
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 10px auto;
 }
 
 .piso {
@@ -197,4 +326,300 @@ textarea {
 
 .blanco {
     background-color: #f7c66a;
+}
+
+footer {
+    background: var(--linpri);
+    color: whitesmoke;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+#redes a {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    color: black;
+}
+
+#redes a:hover {
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 1055px) {
+    .contenedor p {
+        font-size: 24px;
+    }
+
+    .contenedor img {
+        width: 300px;
+    }
+
+    .des-Ti {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .contenedor p {
+        font-size: 20px;
+    }
+
+    .contenedor img {
+        width: 280px;
+    }
+
+    .des-Ti {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 773px) { 
+    header img {
+        width: 170px;
+    }
+
+    header {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header ul li {
+        margin: 0 10px;
+    }
+    
+    header ul li a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .contenedor p {
+        font-size: 16px;
+    }
+
+    .contenedor img {
+        width: 240px;
+    }
+
+    .des-Ti {
+        font-size: 32px;
+    }
+
+    .contenedor-letras {
+        padding: 0;
+        margin: 5px;
+    }
+    
+    .cont {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 622px) {
+    .contenedor p {
+        font-size: 15px;
+    }
+
+    .contenedor img {
+        width: 210px;
+    }
+
+    .des-Ti {
+        font-size: 25px;
+    }
+    
+    .cont {
+        font-size: 11.2px;
+        width: 90px;
+    }
+
+    #explicacion {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 607px) {
+    .cont {
+        width: 82px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 562px) {
+    .contenedor p {
+        font-size: 14px;
+    }
+
+    .contenedor img {
+        width: 170px;
+    }
+
+    .des-Ti {
+        font-size: 22px;
+    }
+    
+    .cont {
+        width: 95px;
+        font-size: 12px;
+    }
+
+    footer h2{
+        font-size: 20px;
+    }
+
+    header img {
+        width: 150px;
+    }
+    
+    header ul li {
+        margin: 0 8px;
+    }
+    
+    header ul li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 508px) {
+    .contenedor p {
+        font-size: 12px;
+    }
+
+    .contenedor img {
+        width: 180px;
+    }
+
+    .des-Ti {
+        font-size: 22px;
+    }
+    
+    .cont {
+        font-size: 11px;
+        width: 80px;
+    }
+
+    header {
+        display: block;
+    }
+
+    header ul{
+        display: block;
+    }
+
+    header img {
+        display: block;
+        margin: auto;
+        width: 90px;
+    }
+
+    header {
+        height: fit-content;
+        margin-top: -119px;
+    }
+    
+    #explicacion {
+        margin-top: 119px;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    .contenedor p {
+        font-size: 11px;
+    }
+
+    .contenedor img {
+        width: 170px;
+    }
+
+    .des-Ti {
+        font-size: 20px;
+    }
+    
+    #cc-codigo button, #contenedor-conbi i, #contenedor-conce, #opciones button,  #ce-conver i {
+        font-size: 15px;
+    }
+
+    footer h2{
+        font-size: 14px;
+    }
+
+    #explicacion {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .InterYconve {
+        display: block;
+        margin: auto;
+    }
+
+    .InterYconve i{
+        width: 185px;
+        text-align: center;
+        display: block;
+        padding: 5px;
+    }
+
+    .cont {
+        font-size: 10px;
+        width: 70px;
+    }
+
+    .contenedor p {
+        font-size: 9px;
+    }
+
+    .contenedor img {
+        width: 110px;
+    }
+
+    .des-Ti {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .contenedor {
+        display: block;
+    }
+
+    .contenedor img {
+        display: block;
+        margin: auto;
+    }
+
+    .des-Ti {
+        font-size: 20px;
+    }
+
+    .contenedor p {
+        font-size: 11px;
+    }
+
+    .cont {
+        font-size: 9px;
+        width: 60px;
+    }
+
+    #opciones {
+        flex-direction: column;
+    }
+
+    #opciones button {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 375px)  {
+    .contenedor-letras {
+        width: 140px;
+        margin: auto;
+    }
+
+    #cc-alfabeto, #ce-alfabeto {
+        text-align: center;
+    }
 }
