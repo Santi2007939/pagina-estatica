@@ -1,3 +1,4 @@
+/*General*/
 :root {
     --ancho: 5px;
     --altura: 5px;
@@ -16,6 +17,20 @@ body {
     background-color: rgb(232, 232, 232);
 }
 
+section {
+    width:100%;
+    margin: auto;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+section, header {
+    border-bottom: 2px solid black;
+}
+
+/*Encabezado*/
 header {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -27,79 +42,53 @@ header {
     background: var(--linpri);
 }
 
-header img {
+#banner {
     margin: auto;
 }
 
-header ul {
+#Lista {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 }
 
-header ul li {
+.ver {
     list-style: none;
     height: 98%;
     margin: 0 20px;
 }
 
-header ul li a {
+.ver a {
     display: flex;
     text-decoration: none;
     color: whitesmoke;
     font-size: 25px;
-    height: 100%;
+    height: 95%;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-header ul li a:hover {
+.ver a:hover {
     background-color: whitesmoke;
     color: #6096B4;
 }
 
-section {
-    display: block;
-    width: 90%;
-    margin: 0 100px;
-}
-
-section[id] {
-    scroll-margin-top: 100px;
-}
-
-section[id="convertidores"] {
-    scroll-margin-top: 120px;
-}
-
-section:first-of-type {
-    margin-top: 100px;
-}
-
-section, header {
-    border-bottom: 2px solid black;
-}
-
-section {
-    width:100%;
-    margin: auto;
-}
-
+/*Explicacion*/
 #explicacion {
+    margin-top: 100px;
     height: fit-content;
     font-size: 25px;
     border-bottom: none;
     padding: 10px;
     background: linear-gradient(to right, #93BFCF, #BDCDD6, #93BFCF);
-}
-
-#explicacion p {
     text-align: center;
 }
 
+/*Convertidor Binario*/
 #convertidores {
+    scroll-margin-top: 120px;
     margin-top: 20px;
     width: 80%;
     border-bottom: none;
@@ -111,7 +100,7 @@ section {
     margin: 30px;
 }
 
-#opciones button {
+.opcion {
     border-radius: 10px;
     padding: 10px;
     font-size: 20px;
@@ -120,20 +109,20 @@ section {
     color: #F1DBBF;
 }
 
-#opciones button:hover {
+.opcion:hover {
     background-color: #F1DBBF;
     border-color: #F1DBBF;
     color: #698269;
 }
 
-textarea {
+.areat {
     width: 100%;
+    min-height: 100px;
     border-radius: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     font-family: 'Karla', sans-serif;
     font-size: 22px;
     resize: vertical;
-    min-height: 100px;
     padding: 10px;
 }
 
@@ -179,8 +168,9 @@ textarea {
     color: #86A3B8;
 }
 
+/*Alfabeto*/
 #cc-alfabeto, #ce-alfabeto {
-    max-width: 100%;
+    width: 100%;
     background-color: #D8D9CF;
     margin: 50px 0 ;
     padding: 20px;
@@ -229,7 +219,8 @@ hr {
     height: 40px;
     font-size: 15px;
 }
-span {
+
+.caracter span {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -246,6 +237,7 @@ span {
     background-color: #dedddd;
 }
 
+/*Descripciones*/
 #descripciones{
     border-top: 2px solid black;
 }
@@ -285,14 +277,20 @@ span {
     text-align: justify;
 } 
 
+/*Pie de pagina*/
 footer {
     text-align: center;
+    background: var(--linpri);
+    color: whitesmoke;
+    height: 100%;
+    margin-bottom: 10px;
 }
 
 footer h2 {
     padding-top: 2px;
 }
 
+/*Dibujo*/
 .dibujo {
     width: fit-content;
     height: fit-content;
@@ -328,13 +326,7 @@ footer h2 {
     background-color: #f7c66a;
 }
 
-footer {
-    background: var(--linpri);
-    color: whitesmoke;
-    height: 100%;
-    margin-bottom: 10px;
-}
-
+/*Redes*/
 #redes a {
     text-decoration: none;
     font-size: 30px;
@@ -346,6 +338,7 @@ footer {
     color: whitesmoke;
 }
 
+/*Media*/
 @media screen and (max-width: 1055px) {
     .contenedor p {
         font-size: 24px;
@@ -375,7 +368,7 @@ footer {
 }
 
 @media screen and (max-width: 773px) { 
-    header img {
+    #banner {
         width: 170px;
     }
 
@@ -384,11 +377,11 @@ footer {
         justify-content: center;
     }
     
-    header ul li {
+    .ver {
         margin: 0 10px;
     }
     
-    header ul li a {
+    .ver a {
         font-size: 18px;
     }
 }
@@ -468,15 +461,15 @@ footer {
         font-size: 20px;
     }
 
-    header img {
+    #banner {
         width: 150px;
     }
     
-    header ul li {
+    .ver {
         margin: 0 8px;
     }
     
-    header ul li a {
+    .ver a {
         font-size: 15px;
     }
 }
@@ -499,16 +492,11 @@ footer {
         width: 80px;
     }
 
-    header {
+    header, #lista, #banner {
         display: block;
     }
 
-    header ul{
-        display: block;
-    }
-
-    header img {
-        display: block;
+    #banner {
         margin: auto;
         width: 90px;
     }
