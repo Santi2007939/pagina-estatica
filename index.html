@@ -17,15 +17,15 @@
             <img src="Tracodi-Banner.png" alt="Imagen del banner de la página" id="banner">
             <nav>
                 <ul id="Lista">
-                    <li class="ver"><a href="#traductores">Convertidores</a></li>
+                    <li class="ver"><a href="#convertidores">Convertidores</a></li>
                     <li class="ver"><a href="#binario">Binario</a></li>
-                    <li class="ver"><a href="#cifrado-cesar">Cifrado César - Rot 13</a></li>
+                    <li class="ver"><a href="#cifrado-cesar">ROT13</a></li>
                     <li class="ver"><a href="#reversa">Reversa</a></li>
                 </ul>
             </nav>
         </header>
         <section id="explicacion">
-            <p id="intro">Página en la que podrás traducir un texto a Código Binario, Cifrado César - Rot 13 o colocar tu texto al revés.</p>
+            <p id="intro">Página en la que podrás traducir un texto a Código Binario, Cifrado César - Rot 13 o colocar tu texto al revés</p>
         </section>
         <section id="convertidores">
             <div id="opciones">
@@ -39,8 +39,10 @@
                         <h2 class="traductor-texto">Texto</h2>
                         <textarea name="input" id="cc-input" cols="30" rows="10" class="areat binario"></textarea>
                     </div>
-                    <i class="fa-solid fa-arrow-right-arrow-left" id="cc-intercambiar"></i>
-                    <i class="fa-solid fa-arrows-rotate" id="cc-convertir-texto-a-codigo"></i>
+                    <div class="InterYconve">
+                        <i class="fa-solid fa-arrow-right-arrow-left" id="cc-intercambiar"> Intercambiar</i>
+                        <i class="fa-solid fa-arrows-rotate" id="cc-convertir-texto-a-codigo"> Convertir</i>
+                    </div>
                     <div class="traductor" id="cc-codigo">
                         <h2 class="traductor-texto">Código binario</h2>
                         <button id="sep-jun" class="separado">Mostrando separado</button>
@@ -187,7 +189,9 @@
                         <h2 class="traductor-texto">Texto</h2>
                         <textarea name="input" id="ce-input" cols="30" rows="10" class="areat cesar"></textarea>
                     </div>
-                    <i class="fa-solid fa-arrows-rotate" id="ce-convertir-texto-a-codigo"></i>
+                    <div class="InterYconve">
+                        <i class="fa-solid fa-arrows-rotate" id="ce-convertir-texto-a-codigo"></i>
+                    </div>
                     <div class="traductor" id="ce-codigo">
                         <h2 class="traductor-texto">Cifrado César - ROT13</h2>
                         <textarea name="output" id="ce-output" cols="30" rows="10" class="areat cesar"></textarea>
@@ -230,7 +234,7 @@
                 </div>
             </div>
         </section>
-        <div id="descripciones">
+        <section id="descripciones">
             <section id="binario">
                 <div class="descrip-texto">
                     <h2 class="des-Ti">Código Binario</h2>
@@ -252,7 +256,7 @@
                 </div>
                 <img src="reversa.png" alt="Reversa">
             </section>
-        </div>
+        </section>
         <footer>
             <h2>Gracias por visitar, si deseas apoyarme puedes seguirme</h2>
             <article class="dibujo">
