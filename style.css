@@ -126,12 +126,12 @@ header {
     padding: 10px;
 }
 
-#cc-conver h2, #ce-conver h2 {
+#cc-conver h2, #ce-conver h2, #re-conver h2 {
     text-align: center;
     padding: 10px;
 }
 
-#contenedor-conbi i, #contenedor-conce i {
+#contenedor-conbi i, #contenedor-conce i, #contenedor-Rever i {
     padding: 20px;
     margin: 20px auto;
     border: #A7727D;
@@ -140,7 +140,7 @@ header {
     border-radius: 10px;
 }
 
-#contenedor-conbi i:hover, #contenedor-conce i:hover {
+#contenedor-conbi i:hover, #contenedor-conce i:hover, #contenedor-Rever i:hover {
     background-color: #EDDBC7;
     border: #EDDBC7;
     color: #A7727D;
@@ -166,6 +166,10 @@ header {
     background-color: #E8D2A6;
     border-color: #E8D2A6;
     color: #86A3B8;
+}
+
+#contenedor-Rever {
+    margin-bottom: 20px;
 }
 
 /*Alfabeto*/
@@ -437,6 +441,10 @@ footer h2 {
         width: 82px;
         font-size: 11px;
     }
+
+    .areat {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 562px) {
@@ -492,7 +500,7 @@ footer h2 {
         width: 80px;
     }
 
-    header, #lista, #banner {
+    header, #Lista, #banner {
         display: block;
     }
 
@@ -524,7 +532,7 @@ footer h2 {
         font-size: 20px;
     }
     
-    #cc-codigo button, #contenedor-conbi i, #contenedor-conce, #opciones button,  #ce-conver i {
+    #cc-codigo button, #contenedor-conbi i, #contenedor-conce, #opciones button,  #ce-conver i, #contenedor-Rever i {
         font-size: 15px;
     }
 
