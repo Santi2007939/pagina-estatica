@@ -109,10 +109,20 @@ header {
     color: #F1DBBF;
 }
 
-.opcion:hover {
-    background-color: #F1DBBF;
+#btn-Bi {
     border-color: #F1DBBF;
-    color: #698269;
+}
+
+.opcion:hover {
+    background-color: #F1DBBF !important;
+    border-color: #F1DBBF !important;
+    color: #698269 !important;
+    cursor: pointer;
+}
+
+#cc-conver {
+    display: flex;
+    flex-direction: column;
 }
 
 .areat {
